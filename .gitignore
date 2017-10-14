@@ -1,0 +1,6 @@
+/ponzu-server
+/uploads
+/search
+/*.db
+/*.exe
+/*.lock
