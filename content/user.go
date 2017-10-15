@@ -49,14 +49,14 @@ func (u *User) MarshalEditor() ([]byte, error) {
 			View: editor.Input("Email", u, map[string]string{
 				"label":       "Email",
 				"type":        "text",
-				"placeholder": "Enter the Email here",
+				"placeholder": "Enter your Email here",
 			}),
 		},
 		editor.Field{
 			View: editor.Input("Password", u, map[string]string{
 				"label":       "Password",
 				"type":        "password",
-				"placeholder": "Enter the Email here",
+				"placeholder": "Enter your Password here",
 			}),
 		},
 		editor.Field{
@@ -121,6 +121,12 @@ func (u *User) Hide(res http.ResponseWriter, req *http.Request) error {
 	return nil
 }
 
+func (u *User) Omit(res http.ResponseWriter, req *http.Request) ([]string, error) {
+	return []string{
+		"password",
+	}, nil
+}
+
 func (u *User) BeforeAPICreate(res http.ResponseWriter, req *http.Request) error {
 	// Check if email address is already in use based on the request
 	err := access.Check(u.Email)
@@ -180,9 +186,17 @@ func (u *User) AfterReject(res http.ResponseWriter, req *http.Request) error {
 }
 
 func (u *User) AfterAdminDelete(res http.ResponseWriter, req *http.Request) error {
-	return access.ClearPending(u.Email)
+	err := access.ClearPending(u.Email)
+	if err != nil {
+		return fmt.Errorf("%v", err)
+	}
+	return access.ClearGrant(u.Email)
 }
 
 func (u *User) AfterDelete(res http.ResponseWriter, req *http.Request) error {
-	return access.ClearPending(u.Email)
+	err := access.ClearPending(u.Email)
+	if err != nil {
+		return fmt.Errorf("%v", err)
+	}
+	return access.ClearGrant(u.Email)
 }
