@@ -132,8 +132,12 @@ func (u *User) BeforeAPICreate(res http.ResponseWriter, req *http.Request) error
 	err := access.Check(u.Email)
 	if err == nil {
 		if err = access.Pending(u.Email); err != nil {
+			res.WriteHeader(http.StatusInternalServerError)
 			return fmt.Errorf("error adding user to pending bucket: %v", err)
 		}
+	}
+	if err != nil {
+		res.WriteHeader(http.StatusBadRequest)
 	}
 
 	return err
@@ -141,6 +145,7 @@ func (u *User) BeforeAPICreate(res http.ResponseWriter, req *http.Request) error
 
 func (u *User) BeforeAPIUpdate(res http.ResponseWriter, req *http.Request) error {
 	if !access.IsOwner(req, req.Header, u.Email) {
+		res.WriteHeader(http.StatusBadRequest)
 		return fmt.Errorf(
 			"grant provided is not owner of user, from %s",
 			req.RemoteAddr,
