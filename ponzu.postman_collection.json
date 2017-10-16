@@ -1,0 +1,499 @@
+{
+	"variables": [],
+	"info": {
+		"name": "ponzu",
+		"_postman_id": "22e2f08a-7c82-0f05-b487-987e7277ed45",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"url": {
+					"raw": "https://localhost:10443/api/content/create?type=User",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "10443",
+					"path": [
+						"api",
+						"content",
+						"create"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "User",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "first_name",
+							"value": "Final",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Test",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "finale@testing.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "position_title",
+							"value": "Just a Jimmy",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Thisisapassword",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": "creating users for ponzu-cms with 'access' addon"
+			},
+			"response": [
+				{
+					"id": "485036f4-3445-408c-8f77-1936990de319",
+					"name": "Create User",
+					"originalRequest": {
+						"url": {
+							"raw": "https://localhost:10443/api/content/create?type=User",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "10443",
+							"path": [
+								"api",
+								"content",
+								"create"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "User",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "first_name",
+									"value": "Final",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Test",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "finale@testing.com",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "position_title",
+									"value": "Just a Jimmy",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Thisisapassword",
+									"description": "",
+									"type": "text"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plainText",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "access-control-allow-headers",
+							"key": "access-control-allow-headers",
+							"value": "Accept, Authorization, Content-Type",
+							"description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+						},
+						{
+							"name": "access-control-allow-origin",
+							"key": "access-control-allow-origin",
+							"value": "*",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"name": "cache-control",
+							"key": "cache-control",
+							"value": "max-age=2592000, public",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"name": "content-length",
+							"key": "content-length",
+							"value": "0",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "text/plain; charset=utf-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Sat, 14 Oct 2017 13:36:20 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "etag",
+							"key": "etag",
+							"value": "MTUwNzk4ODE1NA==",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						}
+					],
+					"cookie": [],
+					"responseTime": 25,
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "Get a Token",
+			"request": {
+				"url": {
+					"raw": "https://localhost:10443/api/content/create?type=Token",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "10443",
+					"path": [
+						"api",
+						"content",
+						"create"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "Token",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic amFjY29ibUB0ZXN0aW5nLmNvbTpUaGlzaXNhcGFzc3dvcmQz",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "jaccobm@testing.com",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": "How to get a token"
+			},
+			"response": [
+				{
+					"id": "fdfc7402-f7b9-4979-abe8-395a92f3dc90",
+					"name": "Get a Token",
+					"originalRequest": {
+						"url": {
+							"raw": "http://10.0.1.42:8081/api/content/create?type=Token",
+							"protocol": "http",
+							"host": [
+								"10",
+								"0",
+								"1",
+								"42"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"content",
+								"create"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "Token",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"name": "Authorization",
+								"value": "Basic ZmluYWxlQHRlc3RpbmcuY29tOlRoaXNpc2FwYXNzd29yZA==",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "finale@testing.com",
+									"description": "",
+									"type": "text"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plainText",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "access-control-allow-headers",
+							"key": "access-control-allow-headers",
+							"value": "Accept, Authorization, Content-Type",
+							"description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+						},
+						{
+							"name": "access-control-allow-origin",
+							"key": "access-control-allow-origin",
+							"value": "*",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"name": "authorization",
+							"key": "authorization",
+							"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2Nlc3MiOiJmaW5hbGVAdGVzdGluZy5jb20iLCJhdWQiOm51bGwsImV4cCI6MTUwODc1NDI4MSwiaWF0IjpudWxsLCJpc3MiOm51bGwsImp0aSI6bnVsbCwibmJmIjpudWxsLCJzdWIiOm51bGx9.NdbiDk-CVg6fbK1IiyPwp7PzkZX15JjCr6TGeqemh0w",
+							"description": "Custom header"
+						},
+						{
+							"name": "cache-control",
+							"key": "cache-control",
+							"value": "max-age=2592000, public",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"name": "content-length",
+							"key": "content-length",
+							"value": "0",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "text/plain; charset=utf-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Mon, 16 Oct 2017 10:24:41 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "etag",
+							"key": "etag",
+							"value": "MTUwODA4Njk0Mg==",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						}
+					],
+					"cookie": [],
+					"responseTime": 172,
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "Make an authorized request",
+			"request": {
+				"url": {
+					"raw": "https://localhost:10443/api/content?type=Location&id=1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "10443",
+					"path": [
+						"api",
+						"content"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "Location",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "id",
+							"value": "1",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2Nlc3MiOiJqYWNjb2JtQHRlc3RpbmcuY29tIiwiYXVkIjpudWxsLCJleHAiOjE1MDg1NTE5MTksImlhdCI6bnVsbCwiaXNzIjpudWxsLCJqdGkiOm51bGwsIm5iZiI6bnVsbCwic3ViIjpudWxsfQ.piXI-bUR-U716GOdNJt1GT2KuRA4ygd4eDx1mWWtnhQ",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "b7e72afe-63a0-48ab-8d4f-bcef67aa1693",
+					"name": "Make an authorized request",
+					"originalRequest": {
+						"url": {
+							"raw": "http://10.0.1.42:8081/api/contents?type=User",
+							"protocol": "http",
+							"host": [
+								"10",
+								"0",
+								"1",
+								"42"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"contents"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "User",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhY2Nlc3MiOiJmaW5hbGVAdGVzdGluZy5jb20iLCJhdWQiOm51bGwsImV4cCI6MTUwODU5Mzc4MSwiaWF0IjpudWxsLCJpc3MiOm51bGwsImp0aSI6bnVsbCwibmJmIjpudWxsLCJzdWIiOm51bGx9.avZZZd_MUORcfh0hewOvEzOz-FTVQZKaplrucxf_bJM",
+								"description": "",
+								"warning": ""
+							}
+						],
+						"body": {}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "access-control-allow-headers",
+							"key": "access-control-allow-headers",
+							"value": "Accept, Authorization, Content-Type",
+							"description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+						},
+						{
+							"name": "access-control-allow-origin",
+							"key": "access-control-allow-origin",
+							"value": "*",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"name": "cache-control",
+							"key": "cache-control",
+							"value": "max-age=2592000, public",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"name": "content-encoding",
+							"key": "content-encoding",
+							"value": "gzip",
+							"description": "The type of encoding used on the data."
+						},
+						{
+							"name": "content-length",
+							"key": "content-length",
+							"value": "443",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Mon, 16 Oct 2017 10:23:57 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "etag",
+							"key": "etag",
+							"value": "MTUwODA4Njk0Mg==",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"name": "vary",
+							"key": "vary",
+							"value": "Accept-Encoding",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						}
+					],
+					"cookie": [],
+					"responseTime": 28,
+					"body": "{\"data\":[{\"uuid\":\"30a95a65-fd74-43b5-ad29-89b2e2f255b6\",\"id\":4,\"slug\":\"test,-final\",\"timestamp\":1507988135000,\"updated\":1507988975386,\"first_name\":\"Final\",\"last_name\":\"Test\",\"email\":\"finale@testing.com\",\"position_title\":\"Just a Jimmy\",\"account_status\":\"\",\"purchased_products\":null},{\"uuid\":\"70277fe9-4a62-4e9d-8ad5-b67f7e4656dc\",\"id\":2,\"slug\":\"mc-kinney,-james\",\"timestamp\":1507942974000,\"updated\":1507943214644,\"first_name\":\"James\",\"last_name\":\"Mc Kinney\",\"email\":\"jamesm@testing.com\",\"position_title\":\"Just a James\",\"account_status\":\"\",\"purchased_products\":null},{\"uuid\":\"53742f73-c189-429e-b5f1-e98e51b73882\",\"id\":1,\"slug\":\"mckinney,-john\",\"timestamp\":1507942541496,\"updated\":1507942541496,\"first_name\":\"John\",\"last_name\":\"Mc Kinney\",\"email\":\"johnm@testing.com\",\"position_title\":\"Just a John\",\"account_status\":\"\",\"purchased_products\":null},{\"uuid\":\"0a3c31c0-ede2-4cf8-ab2b-90c76352c162\",\"id\":3,\"slug\":\"mckinney,-jaccob\",\"timestamp\":1507941072000,\"updated\":1507948512205,\"first_name\":\"Jaccob\",\"last_name\":\"McKinney\",\"email\":\"jaccobm@testing.com\",\"position_title\":\"Just a Jaccob\",\"account_status\":\"\",\"purchased_products\":null}]}\n"
+				}
+			]
+		}
+	]
+}
